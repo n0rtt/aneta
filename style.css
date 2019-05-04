@@ -4,6 +4,15 @@
     padding: 0;
 }
 
+:root {
+    --color-black: #000;
+    --color-white: #fff;
+    --color-green: #54be90;
+    --color-grey: #444;
+    --color-dark-grey: #232323;
+    --color-light-grey: #ebebeb;
+}
+
 html {
     font-family: "Roboto", sans-serif;
     font-size: 67.5%;
@@ -16,15 +25,44 @@ body {
 
 a {
     text-decoration: none;
-    color: #000;
+    color: var(--color-black);
 }
 
-h1 {
-    font-size: 5.5rem;
+/* UTILITIES */
+
+.section-heading {
+    font-size: 6rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 8rem;
 }
 
-h2 {
-    font-size: 3.5rem;
+.text-white {
+    color: var(--color-white);
+}
+
+.text-green {
+    color: var(--color-green);
+}
+
+.text-black {
+    color: var(--color-black);
+}
+
+.bg-grey {
+    background: var(--color-light-grey);
+}
+
+.bg-green {
+    background: var(--color-green);
+}
+
+.bg-dark {
+    background: var(--color-black);
+}
+
+.bg-white {
+    background: var(--color-white);
 }
 
 /* LOGO & NAVBAR */
@@ -45,50 +83,51 @@ h2 {
 
 .navbar__logo span {
     font-size: 1.2em;
-    color: #54be90;
+    color: var(--color-green);
 }
 
 /* NAVBAR */
 
 .navbar__menu {
     display: flex;
-    flex: 2 2 80%;
+    flex: 0 2 80%;
     align-items: center;
-    background: #232323;
+    background: var(--color-dark-grey);
     text-transform: uppercase;
 }
 
-.navbar__item {
+.navbar__menu__item {
     flex: 1 1 20%;
 }
 
-.navbar__item--link {
+.navbar__menu__item__link {
     display: block;
     width: 100%;
     padding: 1.2rem 0;
     text-align: center;
-    color: #fff;
+    color: var(--color-white);
 }
 
-.navbar__item--link:hover,
-.current {
-    background: #54be90;
-    color: #000;
+.navbar__menu__item__link:hover,
+.navbar__menu__item__link--current {
+    background: var(--color-green);
+    color: var(--color-dark-grey);
 }
 
 /* WHITESPACE */
 
 .whitespace {
-    height: 8rem;
+    height: 7.5rem;
 }
 
 /* SHOWCASE */
 
 .showcase {
     display: flex;
-    background: #fff url("img/banner.jpeg") no-repeat center center/cover;
-    height: 80vh;
-    color: #fff;
+    background: var(--color-white) url("img/banner.jpeg") no-repeat center
+        center/cover;
+    height: 70vh;
+    color: var(--color-white);
 }
 
 .showcase__content {
@@ -99,27 +138,196 @@ h2 {
 
     /* Overlay */
     position: absolute;
-    top: 20%;
+    top: 13%;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 16%;
     background-color: rgba(0, 0, 0, 0.6);
 }
 
 .name {
     text-decoration: underline;
-    text-decoration-color: #fff;
+    text-decoration-color: var(--color-white);
     font-weight: 700;
-    color: #54be90;
+    color: var(--color-green);
 }
 
 /* SECTION: WHAT WE DO */
 
-.what {
-}
-
 .l-text {
-    padding: 6rem 10rem;
+    padding: 9rem 40rem;
     text-align: justify;
     font-size: 2.2rem;
+    color: var(--color-grey);
+}
+
+/* FEATURES */
+
+.features {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    height: 40rem;
+    padding: 10rem 25rem;
+    margin-bottom: 6rem;
+    background: var(--color-dark-grey);
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    width: 16%;
+}
+
+.feature__heading {
+    padding: 3rem;
+    color: var(--color-green);
+}
+
+.feature__text {
+    color: var(--color-white);
+    padding: 1rem;
+}
+
+/* CIRCLES */
+
+.circles {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30rem;
+    position: absolute;
+    top: -7.5rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.circle {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    background: var(--color-white);
+}
+
+/* SKILLS */
+
+#skills {
+    padding: 0 10rem;
+}
+
+.skillbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skillbox__item {
+    display: flex;
+    width: 70%;
+    margin-bottom: 1rem;
+}
+
+.skillbox__item__name {
+    flex: 1 1 15%;
+    background: var(--color-dark-grey);
+    color: var(--color-white);
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.skillbox__item__bar {
+    display: flex;
+    flex: 0 1 85%;
+}
+
+.skillbox__item__bar--green {
+    background: var(--color-green);
+    border-radius: 4px 0 0 4px;
+}
+
+.skillbox__item__bar--grey {
+    align-self: center;
+    text-align: right;
+    font-size: 1.7rem;
+    background: var(--color-light-grey);
+    color: var(--color-grey);
+    padding: 1.3rem;
+    border-radius: 0 4px 4px 0;
+}
+
+.skillbox > div:first-child .skillbox__item__bar .skillbox__item__bar--green {
+    flex: 0 1 81%;
+}
+
+.skillbox > div:nth-child(2) .skillbox__item__bar .skillbox__item__bar--green {
+    flex: 0 1 80%;
+}
+
+.skillbox > div:nth-child(3) .skillbox__item__bar .skillbox__item__bar--green,
+.skillbox > div:nth-child(5) .skillbox__item__bar .skillbox__item__bar--green {
+    flex: 0 1 70%;
+}
+
+.skillbox > div:nth-child(4) .skillbox__item__bar .skillbox__item__bar--green,
+.skillbox > div:nth-child(6) .skillbox__item__bar .skillbox__item__bar--green,
+.skillbox > div:nth-child(7) .skillbox__item__bar .skillbox__item__bar--green {
+    flex: 0 1 60%;
+}
+
+.skillbox > div:last-child .skillbox__item__bar .skillbox__item__bar--green {
+    flex: 0 1 50%;
+}
+
+.skillbox__item__bar--grey {
+    flex: 1 1 auto;
+}
+
+/* PORTFOLIO */
+
+/* ABOUT ME */
+
+/* FIND ME HERE */
+
+.social__heading {
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 10rem;
+    font-size: 3rem;
+}
+
+.social__icons {
+    display: flex;
+    justify-content: space-between;
+    padding: 15rem;
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* CONTACT ME */
+
+.contact-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.contact-form form > input:not(:last-child) {
+    display: flex;
+    flex: 0 1 40%;
+    flex-flow: row wrap;
+}
+
+.contact-form textarea,
+.contact-form label,
+.contact-form input:last-child {
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.contact-form input:last-child {
+    padding: 1rem;
+    color: var(--color-white);
+    background: var(--color-black);
+    border-radius: 4px;
 }

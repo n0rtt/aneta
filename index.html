@@ -8,39 +8,49 @@
             href="https://fonts.googleapis.com/css?family=Aclonica"
             rel="stylesheet"
         />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+            crossorigin="anonymous"
+        />
         <link rel="stylesheet" href="reset.css" />
         <link rel="stylesheet" href="style.css" />
         <title>Aneta Webbie | Web Developer</title>
     </head>
     <body>
+        <!-- NAVBAR -->
+
         <header id="header">
             <nav class="navbar">
                 <div class="navbar__logo">
                     <a href="index.html">A<span>W</span></a>
                 </div>
                 <ul class="navbar__menu">
-                    <li class="navbar__item">
-                        <a class="navbar__item--link current" href="index.html"
+                    <li class="navbar__menu__item">
+                        <a class="navbar__menu__item__link" href="#header"
                             >Home</a
                         >
                     </li>
-                    <li class="navbar__item">
-                        <a class="navbar__item--link" href="index.html"
+                    <li class="navbar__menu__item">
+                        <a class="navbar__menu__item__link" href="#skills"
                             >Skills</a
                         >
                     </li>
-                    <li class="navbar__item">
-                        <a class="navbar__item--link" href="index.html"
+                    <li class="navbar__menu__item">
+                        <a
+                            class="navbar__menu__item__link navbar__menu__item__link--current"
+                            href="#portfolio"
                             >Portfolio</a
                         >
                     </li>
-                    <li class="navbar__item">
-                        <a class="navbar__item--link" href="index.html"
+                    <li class="navbar__menu__item">
+                        <a class="navbar__menu__item__link" href="#about"
                             >About Me</a
                         >
                     </li>
-                    <li class="navbar__item">
-                        <a class="navbar__item--link" href="index.html"
+                    <li class="navbar__menu__item">
+                        <a class="navbar__menu__item__link" href="#contact"
                             >Contact</a
                         >
                     </li>
@@ -55,10 +65,10 @@
 
         <main class="showcase">
             <div class="showcase__content">
-                <h1 class="showcase__content--heading">
+                <h1 class="showcase__content__heading">
                     Hi, I am <span class="name">Aneta Webbie.</span>
                 </h1>
-                <h2 class="showcase__content--second-heading">
+                <h2 class="showcase__content__second-heading">
                     I'm a Full-stack Web Developer.
                 </h2>
             </div>
@@ -75,14 +85,194 @@
                     application.</strong
                 >
             </p>
+
+            <!-- FEATURES -->
+
             <div class="features">
-                <div class="feature">
-                    
+                <!-- CIRCLES -->
+                <div class="circles">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
                 </div>
-                <div class="feature"></div>
-                <div class="feature"></div>
-                <div class="feature"></div>
+
+                <div class="feature">
+                    <h3 class="feature__heading">
+                        Discover
+                    </h3>
+                    <p class="feature__text">
+                        Tell me about your project and we brainstorm together
+                        the features to create a plan for your product to
+                        launch.
+                    </p>
+                </div>
+                <div class="feature">
+                    <h3 class="feature__heading">
+                        Design
+                    </h3>
+                    <p class="feature__text">
+                        We design the wireframe and agree together how to create
+                        the best experience for your users to present your
+                        brand.
+                    </p>
+                </div>
+                <div class="feature">
+                    <h3 class="feature__heading">
+                        Deploy
+                    </h3>
+                    <p class="feature__text">
+                        We prototype and develop your product. We work together
+                        intansily to incorporate your feedback.
+                    </p>
+                </div>
+                <div class="feature">
+                    <h3 class="feature__heading">
+                        Be Ready
+                    </h3>
+                    <p class="feature__text">
+                        We deploy your product and now your website is ready to
+                        get the traction.Get out there and grow your audience.
+                    </p>
+                </div>
             </div>
         </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="bg-white">
+            <h2 class="section-heading text-green">
+                My skills
+            </h2>
+            <div class="skillbox">
+                <div class="skillbox__item">
+                    <div class="skillbox__item__name">HTML</div>
+                    <div class="skillbox__item__bar">
+                        <div class="skillbox__item__bar--green"></div>
+                        <div class="skillbox__item__bar--grey">80%</div>
+                    </div>
+                </div>
+                <div class="skillbox__item">
+                    <div class="skillbox__item__name">CSS, Sass</div>
+                    <div class="skillbox__item__bar">
+                        <div class="skillbox__item__bar--green"></div>
+                        <div class="skillbox__item__bar--grey">80%</div>
+                    </div>
+                </div>
+                <div class="skillbox__item">
+                    <div class="skillbox__item__name">JavaScript</div>
+                    <div class="skillbox__item__bar">
+                        <div class="skillbox__item__bar--green"></div>
+                        <div class="skillbox__item__bar--grey">70%</div>
+                    </div>
+                </div>
+                <div class="skillbox__item">
+                    <div class="skillbox__item__name">React</div>
+                    <div class="skillbox__item__bar">
+                        <div class="skillbox__item__bar--green"></div>
+                        <div class="skillbox__item__bar--grey">60%</div>
+                    </div>
+                </div>
+                <div class="skillbox__item">
+                    <div class="skillbox__item__name">JQuery</div>
+                    <div class="skillbox__item__bar">
+                        <div class="skillbox__item__bar--green"></div>
+                        <div class="skillbox__item__bar--grey">70%</div>
+                    </div>
+                </div>
+                <div class="skillbox__item">
+                    <div class="skillbox__item__name">PHP</div>
+                    <div class="skillbox__item__bar">
+                        <div class="skillbox__item__bar--green"></div>
+                        <div class="skillbox__item__bar--grey">60%</div>
+                    </div>
+                </div>
+                <div class="skillbox__item">
+                    <div class="skillbox__item__name">Laravel</div>
+                    <div class="skillbox__item__bar">
+                        <div class="skillbox__item__bar--green"></div>
+                        <div class="skillbox__item__bar--grey">60%</div>
+                    </div>
+                </div>
+                <div class="skillbox__item">
+                    <div class="skillbox__item__name">UX</div>
+                    <div class="skillbox__item__bar">
+                        <div class="skillbox__item__bar--green"></div>
+                        <div class="skillbox__item__bar--grey">50%</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO -->
+        <section id="portfolio" class="bg-green">
+            <h2 class="section-heading text-white">
+                My portfolio
+            </h2>
+        </section>
+
+        <!-- ABOUT ME -->
+        <section id="about bg-grey">
+            <h2 class="section-heading text-black">
+                About me
+            </h2>
+
+            <!-- FIND ME HERE -->
+            <div class="social bg-dark text-white">
+                <h3 class="social__heading">
+                    Find me here
+                </h3>
+                <div class="social__icons">
+                    <i class="fab fa-github fa-7x"></i>
+                    <i class="fab fa-linkedin-in fa-7x"></i>
+                    <i class="fab fa-instagram fa-7x"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT ME -->
+        <section id="contact" class="bg-green text-white">
+            <h2 class="section-heading">
+                Contact Me
+            </h2>
+            <div class="contact-form">
+                <form>
+                    <input
+                        type="text"
+                        name="firstname"
+                        id="fname"
+                        placeholder="First Name *"
+                    />
+                    <input
+                        type="text"
+                        name="lastname"
+                        id="lname"
+                        placeholder="Last Name *"
+                    />
+                    <input
+                        type="email"
+                        name="email"
+                        id="fname"
+                        placeholder="Email *"
+                    />
+                    <input
+                        type="number"
+                        name="phone"
+                        id="phone"
+                        placeholder="Phone"
+                    />
+                    <label for="message">My message</label>
+                    <textarea
+                        name="message"
+                        id="message"
+                        cols="30"
+                        rows="10"
+                    ></textarea>
+                    <input type="submit" value="Send my message" />
+                </form>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer id="footer" class="bg-grey"></footer>
     </body>
 </html>
