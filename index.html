@@ -21,81 +21,76 @@
     <body>
         <!-- NAVBAR -->
 
-        <header id="header">
-            <nav class="navbar">
-                <div class="navbar__logo">
-                    <a href="index.html">A<span>W</span></a>
-                </div>
-                <ul class="navbar__menu">
-                    <li class="navbar__menu__item">
-                        <a class="navbar__menu__item__link" href="#header"
-                            >Home</a
-                        >
-                    </li>
-                    <li class="navbar__menu__item">
-                        <a class="navbar__menu__item__link" href="#skills"
-                            >Skills</a
-                        >
-                    </li>
-                    <li class="navbar__menu__item">
-                        <a
-                            class="navbar__menu__item__link navbar__menu__item__link--current"
-                            href="#portfolio"
-                            >Portfolio</a
-                        >
-                    </li>
-                    <li class="navbar__menu__item">
-                        <a class="navbar__menu__item__link" href="#about"
-                            >About Me</a
-                        >
-                    </li>
-                    <li class="navbar__menu__item">
-                        <a class="navbar__menu__item__link" href="#contact"
-                            >Contact</a
-                        >
-                    </li>
-                </ul>
-            </nav>
-
-            <!-- WHITESPACE -->
-            <div class="whitespace"></div>
-        </header>
+        <nav id="navbar">
+            <div class="navbar__logo">
+                <a href="index.html">A<span>W</span></a>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__menu__item">
+                    <a class="navbar__menu__item__link" href="#header">Home</a>
+                </li>
+                <li class="navbar__menu__item">
+                    <a class="navbar__menu__item__link" href="#skills"
+                        >Skills</a
+                    >
+                </li>
+                <li class="navbar__menu__item">
+                    <a
+                        class="navbar__menu__item__link navbar__menu__item__link--current"
+                        href="#portfolio"
+                    >
+                        Portfolio
+                    </a>
+                </li>
+                <li class="navbar__menu__item">
+                    <a class="navbar__menu__item__link" href="#about">
+                        About Me
+                    </a>
+                </li>
+                <li class="navbar__menu__item">
+                    <a class="navbar__menu__item__link" href="#contact">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
         <!-- SHOWCASE -->
-
-        <main class="showcase">
-            <div class="showcase__content">
-                <h1 class="showcase__content__heading">
-                    Hi, I am <span class="name">Aneta Webbie.</span>
-                </h1>
-                <h2 class="showcase__content__second-heading">
-                    I'm a Full-stack Web Developer.
-                </h2>
+        <header id="header">
+            <div class="showcase">
+                <div class="showcase__content">
+                    <h1 class="showcase__content__heading">
+                        Hi, I am <span class="name">Aneta Webbie.</span>
+                    </h1>
+                    <h2 class="showcase__content__second-heading">
+                        I'm a Full-stack Web Developer.
+                    </h2>
+                </div>
             </div>
-        </main>
+        </header>
 
         <!-- SECTION: WHAT WE DO -->
-        <section class="what">
+        <main class="what">
             <p class="l-text">
                 Let's work together to make
                 <strong>your product stand out.</strong> I create beautiful and
                 functional websites. I work with my clients step by step
-                <strong
-                    >from the ideastage until the fully functioning web
-                    application.</strong
-                >
+                <strong>
+                    from the ideastage until the fully functioning web
+                    application.
+                </strong>
             </p>
 
             <!-- FEATURES -->
 
             <div class="features">
                 <!-- CIRCLES -->
-                <div class="circles">
+                <!-- <div class="circles">
                     <div class="circle"></div>
                     <div class="circle"></div>
                     <div class="circle"></div>
                     <div class="circle"></div>
-                </div>
+                </div> -->
 
                 <div class="feature">
                     <h3 class="feature__heading">
@@ -136,7 +131,7 @@
                     </p>
                 </div>
             </div>
-        </section>
+        </main>
 
         <!-- SKILLS -->
         <section id="skills" class="bg-white">
@@ -273,6 +268,62 @@
         </section>
 
         <!-- FOOTER -->
-        <footer id="footer" class="bg-grey"></footer>
+        <footer id="footer" class="bg-grey">
+            <h3 class="footer__heading">
+                Nice to meet you!
+            </h3>
+            <div class="footer__social-icons">
+                <i class="fab fa-github fa-4x"></i>
+                <i class="fab fa-linkedin-in fa-4x"></i>
+                <i class="fab fa-instagram fa-4x"></i>
+            </div>
+            <div class="footer__copyright">
+                Copyright @Aneta Webbie <span id="year">2018</span>
+            </div>
+        </footer>
     </body>
+
+    <script
+        src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        // Get the current year for the copyright
+        $("#year").text(new Date().getFullYear());
+
+        // Init Scrollspy
+        $("body").scrollspy({ target: "#navbar" });
+
+        // Add smooth scrolling
+        $("#navbar a").on("click", function(e) {
+            // Check for a hash value
+            if (this.hash !== "") {
+                // Prevent default behavior
+                e.preventDefault();
+
+                // Store hash
+                const hash = this.hash;
+
+                // Animate smooth scroll
+                $("html, body").animate(
+                    {
+                        scrollTop: $(hash).offset().top
+                    },
+                    900,
+                    function() {
+                        // Add hash to URL after scroll
+                        window.location.hash = hash;
+                    }
+                );
+            }
+        });
+    </script>
 </html>
