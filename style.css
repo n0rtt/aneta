@@ -128,9 +128,10 @@ a {
 
 .showcase {
     display: flex;
+    justify-content: center;
     background: var(--color-white) url("img/banner.jpeg") no-repeat center
         center/cover;
-    height: 70vh;
+    height: 60vh;
     color: var(--color-white);
 }
 
@@ -140,13 +141,22 @@ a {
     align-items: center;
     padding-top: 8rem;
 
-    /* Overlay */
-    /* position: absolute;
-    top: 13%;
-    left: 0;
-    right: 0;
-    bottom: 16%;
-    background-color: rgba(0, 0, 0, 0.6); */
+       /* Overlay */
+       /* position: absolute;
+       top: 0;
+       left: 0;
+       right: 0;
+       bottom: 0;
+       background-color: rgba(0, 0, 0, 0.6); */
+}
+
+.showcase__content__heading {
+    font-size: 6rem;
+    margin-top: 4rem;
+}
+
+.showcase__content__heading--secondary {
+    font-size: 4.5rem;
 }
 
 .name {
