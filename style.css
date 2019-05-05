@@ -74,6 +74,7 @@ a {
     position: sticky;
     top: 0;
     background: var(--color-white);
+    z-index: 10;
 }
 
 /* LOGO */
@@ -84,7 +85,6 @@ a {
     padding: 0.8rem 2.5rem;
     font-family: "Aclonica", sans-serif;
     font-size: 2.5rem;
-    
 }
 
 .navbar__logo span {
@@ -121,7 +121,7 @@ a {
 }
 
 #header {
-    margin-top: 8rem;
+    margin-top: 7.5rem;
 }
 
 /* SHOWCASE */
@@ -131,7 +131,7 @@ a {
     justify-content: center;
     background: var(--color-white) url("img/banner.jpeg") no-repeat center
         center/cover;
-    height: 60vh;
+    height: 54rem;
     color: var(--color-white);
 }
 
@@ -141,13 +141,13 @@ a {
     align-items: center;
     padding-top: 8rem;
 
-       /* Overlay */
-       /* position: absolute;
-       top: 0;
-       left: 0;
-       right: 0;
-       bottom: 0;
-       background-color: rgba(0, 0, 0, 0.6); */
+    /* Overlay */
+    position: absolute;
+    top: 12rem;
+    left: 0;
+    right: 0;
+    bottom: 24.5rem;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .showcase__content__heading {
@@ -179,9 +179,6 @@ a {
 
 .features {
     display: flex;
-    position: relative;
-    justify-content: space-between;
-    height: 40rem;
     padding: 10rem 25rem;
     margin-bottom: 6rem;
     background: var(--color-dark-grey);
@@ -190,43 +187,41 @@ a {
 .feature {
     display: flex;
     flex-direction: column;
-    width: 16%;
+    align-items: center;
+    width: 25%;
+    position: relative;
 }
 
 .feature__heading {
-    padding: 3rem;
+    font-size: 3rem;
+    padding: 2rem;
     color: var(--color-green);
 }
 
 .feature__text {
     color: var(--color-white);
-    padding: 1rem;
+    width: 70%;
+    text-align: justify;
 }
 
-/* CIRCLES */
-
-.circles {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 30rem;
-    position: absolute;
-    top: -7.5rem;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-.circle {
+.feature__circle {
     height: 15rem;
     width: 15rem;
     border-radius: 50%;
     background: var(--color-white);
+
+    /* Overlay */
+    position: absolute;
+    top: -18rem;
+    left: 25%;
+    right: 0;
+    bottom: 0;
 }
 
 /* SKILLS */
 
 #skills {
-    padding: 0 10rem;
+    padding: 0 10rem 15rem;
 }
 
 .skillbox {
